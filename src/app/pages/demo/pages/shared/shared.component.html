@@ -1,1 +1,13 @@
-<p>shared works!</p>
+<h2>Formulario de Angular</h2>
+<!--  -->
+<form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+  <app-button (click)="organizarElemento()">Organizar texto</app-button>
+  <app-button (click)="onPatchValue()">Agregar texto</app-button>
+  <br>
+  <br>
+  <app-form-field label="Input Base" [required]="true" [control]="form.controls.input" [isInLine]="isInline" [patternError]="regexErrors.number">
+    <app-input formControlName="input"></app-input>
+  </app-form-field>
+
+
+</form>
